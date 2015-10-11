@@ -1,18 +1,19 @@
 # -----------------
 # Main conference details
-CONF.title=Devoxx France 2015
-CONF.subtitle=FR
+CONF.title=Voxxed Days Zürich 2016
+CONF.subtitle=
 
 # Equivalent to ConferenceNaming
-shortYearlyName=Devoxx FR 2015
-longYearlyName=Devoxx France 2015
-shortName=Devoxx France
-longName=Devoxx FR 2015 CFP
-longSplittedName_whiteStart=Devox
-longSplittedName_colored=x
-longSplittedName_whiteEnd=FR 2015
+shortYearlyName=Voxxed Days Zürich 16
+longYearlyName=Voxxed Days Zürich 2016
+shortName=Voxxed Days Zürich
+longName=Voxxed Days Zürich 2016 CFP
+longSplittedName_whiteStart=Voxxed Days
+longSplittedName_colored=Zürich
+longSplittedName_whiteEnd=2016
+conference.dates=3rd March
 # -----------------
-cfp.title=Devoxx FR 2015 CFP
+cfp.title=Voxxed Days Zürich 2016 CFP
 login.error=Invalid email or password
 menu.home=Home
 menu.register=Sign-in
@@ -76,7 +77,7 @@ New.proposal2=New proposal - step 2/2
 Edit.proposal=Edit proposal - step 1/2
 Edit.proposal2=Edit proposal - step 2/2
 title=Presentation title
-title.help=Think carefully and try to create a title that is descriptive enough. Most Devoxxians selects a talk at the very last minute only based on its title.
+title.help=Think carefully and try to create a title that is descriptive enough. Most Attendees selects a talk at the very last minute only based on its title.
 summary=Summary of your presentation, for the attendee
 summary.help=Describe your proposal as it will appear on our website and mobile apps. You can use Markdown syntax.
 lang=Main language
@@ -86,7 +87,7 @@ mainSpeaker2=Multiple Speakers?
 mainSpeaker.help=You can add more speakers once the proposal is created. We offer a full Combi pass for the following slots : Conference, University, Hands-on-Labs, Tools-in-Action. Quickie speakers need to purchase a conference pass!
 otherSpeakers=Other speakers
 talkType=Type of talk
-talkType.help=Each type of talk is described on the <a href\="http://www.devoxx.fr/dvxfr15-faq-2#format" target\="new">FAQ</a>.
+talkType.help=Each type of talk is described on the <a href\="{0}\#confType" target\="new">FAQ</a>.
 
 audienceLevel=Audience level :
 audienceLevel.help=Please, indicate the required audience level for your talk:\
@@ -101,8 +102,8 @@ privateMessage.help=Write here any important details about your presentation, th
 sponsorTalk=Is this a sponsor presentation?
 
 sponsorTalk.help.title=Sponsor talk
-sponsor.name.plz=Please, specify your company/exhibitor name in the private message textarea. This is valid for Silver and Platinium only.
-sponsorTalk.help=Platinum and Gold sponsors can submit one Conference talk, that is automatically accepted and scheduled. Do not tick this checkbox if your company is an exhibitor, and you just want to submit a normal proposal.
+sponsor.name.plz=Please, specify your company/exhibitor name in the private message textarea. This is valid for Platinum and Silver only.
+sponsorTalk.help=Platinum and Silver sponsors can submit one Conference talk, that is automatically accepted and scheduled. Do not tick this checkbox if your company is an exhibitor, and you just want to submit a normal proposal.
 sponsorTalk.checkbox=Yes, this is a sponsor/exhibitor talk
 
 helpAndTips=More info
@@ -121,27 +122,29 @@ preview.warn2=in the main CFP screen.
 next.action=Select next action:
 
 # Proposal type
-key.label=Keynote, 20mn, Thursday and Friday
+key.label=Keynote, 50mn, Thursday
 key.label.simple=Keynote
-conf.label=Conference, 45mn, Thursday and Friday
+conf.label=Conference, 50m, Thursday
 conf.label.simple=Conference
-uni.label=University, 3h, Wednesday
+uni.label=University, 3h, Monday or Tuesday
 uni.label.simple=University
-tia.label=Tools in Action, 30mn, Wednesday or Thursday
+tia.label=Tools in Action, 30mn, only Monday or Tuesday
 tia.label.simple=Tools in Action
-quick.label=Quickie, 15mn, Thursday and Friday, during lunch
+quick.label=Quickie, 20m, Thursday, during lunch
 quick.label.simple=Quickie
-bof.label=Bird of a Feather, 1h, Thursday only evening
+bof.label=Bird of a Feather, 1h, Monday to Thursday evening
 bof.label.simple=Bird of a Feather
-lab.label=Hands-on Labs, 3h, Wednesday
+lab.label=Hands-on Labs, 3h, Monday and Tuesday
 lab.label.simple=Hand''s on Lab
 other.label=Other event
 other.label.simple=Other
-start.label=Startup Talk, 25 min, Wednesday to Friday
+start.label=Startup Talk, 25 min, Wednesday to Thursday
 start.label.simple=Startup
 
 hack.label.simple=Hackatons
 code.label.simple=Codestory
+
+amd.label.simple=Après-midi des décideurs
 
 # Bug report
 Issue.report=Report an issue
@@ -156,12 +159,12 @@ cfp.reminder.proposals=do not forget to submit your Draft
 cfp.program=Program announced :
 cfp.program.date=from {0}
 video.title=Videos
-video.tag=Review Devoxx FR 2014''s videos on
+video.tag=Review Voxxed Days Ticino 2015''s videos on
 theme.title=Tracks
-theme.track=List of tracks for Devoxx France 2015:
+theme.track=List of tracks for Voxxed Days Zürich 2016:
 track.title=Title
 track.description=Description
-appel.conf.dates=Devoxx France 2015, 8th-10th April 2015
+appel.conf.dates=Voxxed Days Zürich 2016, 3rd March 2016
 
 # Tracks
 track.webmobile.title=Web, Mobile &  UX
@@ -176,9 +179,9 @@ track.agilityTest.title=Agility, Methodology & Test
 track.agilityTest.desc=Software development methodologies, TDD, BDD, xDD
 agTest.label=Agility, Methodology & Test
 
-track.java.title=Java, infinite possibilities
-track.java.desc=Everything about Java, the JVM, Java SE 8 or Java EE.
-java.label=Java, infinite possibilities
+track.java.title=Java
+track.java.desc=Everything about Java, the JVM, Java SE or Java EE.
+java.label=Java
 
 track.cloudDevops.title=Cloud, DevOps and Tools
 track.cloudDevops.desc=Cloud-computing, DevOps, Paas, Iaas
@@ -188,13 +191,13 @@ track.bigdata.title=Big Data & Analytics
 track.bigdata.desc=From real-time analysis to massive prediction and cloud storage
 bigdata.label=Big Data & Analytics
 
-track.future.title=Future<Devoxx>
+track.future.title=Future<?>
 track.future.desc=Developing for embedded devices, the internet of things, Arduino, raspberry pi, quadcopters, robots and related
-future.label=Future<Devoxx>
+future.label=Future<?>
 
-track.lang.title=Alternate Languages
-track.lang.desc=Groovy, Scala, Javascript, Clojure, Haskell, C#, Dart, Ceylon, Go, etc.
-lang.label=Alternate Languages
+track.lang.title=Alternative Languages
+track.lang.desc=Groovy, Scala, Clojure, Haskell, C#, Dart, Ceylon, Go, etc.
+lang.label=Alternative Languages
 
 # confirm import
 confirm.import.title=Create your Speaker''s profile
@@ -378,9 +381,9 @@ acceptedProposals.title=List of accepted/refused proposals for {0}
 ar.approved=Approved proposals
 ar.rejected=Refused proposals
 ar.noneApproved=We are very sorry to inform you that none of your proposals have been accepted.
-ar.pleaseAccept=Please confirm for each accepted proposal, that you accept to present this talk. If you co-present a talk with another speaker, it''s also possible that your co-speaker has already accepted to present.
-ar.IAccept=I accept to present this talk
-ar.IDecline=I decline and I will not present this talk
+ar.pleaseAccept=Please confirm for each accepted proposal, that you accept to present this talk
+ar.IAccept=I accept
+ar.IDecline=I decline
 ar.IBackup=As a Backup
 ar.currentStatus=Current status
 ar.pleaseSelect=Please, select one of the action for this proposal:
@@ -453,7 +456,6 @@ sw.hackatons=Hackatons
 sw.hackatons.describe=Coding events, hacking day, organized during the conference
 sw.faq=See our FAQ for more details about each format
 calendar.pref=Speaker''s preferences for schedulling
-calendar.pref.wednesday=Wednesday
 calendar.pref.thursday=Thursday
 calendar.pref.friday=Friday
 calendar.pref.reset=No preferences
@@ -467,11 +469,11 @@ day-confThursday=Thursday
 day-lab=Wednesday
 day-confFriday=Friday
 day-bof=Thursday, 19h30
-day-monday=Monday, 6th April
-day-tuesday=Tuesday, 7th April
-day-wednesday=Wednesday, 8th April
+day-monday=Monday, 10th November
+day-tuesday=Tuesday, 11th November
+day-wednesday=Wednesday, 12th November
 day-thursday=Thursday, 9th April
-day-friday=Friday, 10th April
+day-friday=Friday, 14th November
 
 sw.all.confThursday=Conferences on Thursday
 confThursday=Conferences on Thursday
@@ -503,7 +505,7 @@ sw.show.friday=Friday
 sw.show.title.mon=Monday, 6th April 2015
 sw.show.title.tue=Tuesday, 7th April 2015
 sw.show.title.wed=Wednesday, 8th April 2015
-sw.show.title.thu=Thursday, 9th April 2015
+sw.show.title.thu=Thursday, 3rd March 2016
 sw.show.title.fri=Friday, 10th April 2015
 
 sw.horaires=Schedule
@@ -596,11 +598,11 @@ mail.access_code.subject=Your {0} speaker''s access code
 mail.account_created.subject=Welcome to the CFP for {0} !
 mail.email_validation.subject=Welcome to {0}, please validate your email address now
 mail.issue_reported.subject=New issue reported on CFP web site
-mail.cfp_message_to_speaker.subject=[{1}] {0}
-mail.question_to_speaker.subject=[{1}] {0}
-mail.speaker_message_to_cfp.subject=[{1}] {0}
-mail.notify_proposal.subject=[{1}] {0}
-mail.notify_proposal.content=[{1}] {0}
+mail.cfp_message_to_speaker.subject=[{1}] Message about your presentation {0}
+mail.question_to_speaker.subject=[{1}] New question posted on Devoxx Web site about {0}
+mail.speaker_message_to_cfp.subject=[{0}] {1} posted a new message
+mail.notify_proposal.subject={0} submitted a proposal [{1}]
+mail.notify_proposal.content=A Proposal has been submitted on the CFP, with Title: [{0}], Track: [{1}] and Type: [{2}]
 mail.draft_single_reminder.subject={0} reminder : you have one proposal with status ''Draft''
 mail.draft_multiple_reminder.subject={1} reminder : you have {0} proposals to submit
 mail.proposal_approved.subject=Your proposal has been approved {0}
@@ -638,8 +640,8 @@ day-vendredi=Friday
 error.email=Invalid email address
 error.invalid=Invalid value
 hack.label=Hackaton
-lg_alter.label=Alternate languages on the JVM
-lgaltern.label=Alternate languages on the JVM
+lg_alter.label=Alternative languages on the JVM
+lgaltern.label=Alternative languages on the JVM
 menu.blog=Site DevoxxFR
 signup.long=Register as a speaker on Devoxx France CFP
 sw.all.hack=Hackatons
