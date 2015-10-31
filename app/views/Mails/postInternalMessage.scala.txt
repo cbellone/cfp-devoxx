@@ -10,7 +10,7 @@ Message:
 ------------------------------------------------------------------------------
 
 Please, use this link to respond directly to the message :
-http://@ConferenceDescriptor.current().conferenceUrls.cfpHostname@routes.CFPAdmin.openForReview(proposal.id)
+https://@ConferenceDescriptor.current().conferenceUrls.cfpHostname@routes.CFPAdmin.openForReview(proposal.id)
 
 Thanks
 

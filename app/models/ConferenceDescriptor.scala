@@ -328,8 +328,8 @@ object ConferenceDescriptor {
     bugReportRecipient = Play.current.configuration.getString("mail.bugreport.recipient").getOrElse("info@exteso.com"),
     conferenceUrls = ConferenceUrls(
       faq = "https://voxxeddays.com/zurich16/",
-      registration = "https://ticket.exteso.com/event/vdz2016/",
-      confWebsite = "http://voxxeddays.com/zurich16/",
+      registration = "https://tickets.voxxeddays.com/event/vdz16/",
+      confWebsite = "https://voxxeddays.com/zurich16/",
       cfpHostname = Play.current.configuration.getString("cfp.hostname").getOrElse("cfp.exteso.com")
     ),
     timing = ConferenceTiming(

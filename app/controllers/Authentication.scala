@@ -249,9 +249,9 @@ object Authentication extends Controller  {
                 validFields => {
                   validFields match {
                     case (emailS, nameS) =>
-                      /* bio : "Recommendation: Do not use this attribute. It is obsolete." http://developer.github.com/v3/ */
+                      /* bio : "Recommendation: Do not use this attribute. It is obsolete." https://developer.github.com/v3/ */
                       val bioS = json.\("bio").asOpt[String].getOrElse("")
-                      val avatarUrl = Option("http://www.gravatar.com/avatar/" + DigestUtils.md5Hex(emailS))
+                      val avatarUrl = Option("https://www.gravatar.com/avatar/" + DigestUtils.md5Hex(emailS))
                       val company = json.\("company").asOpt[String]
                       val blog = json.\("blog").asOpt[String]
 
@@ -303,7 +303,7 @@ object Authentication extends Controller  {
         futureMaybeWebuser.map {
           webuser =>
             Webuser.saveAndValidateWebuser(webuser) // it is generated
-            Speaker.save(Speaker.createSpeaker(email, webuser.lastName, "", None, None, Some("http://www.gravatar.com/avatar/" + Webuser.gravatarHash(webuser.email)), None, None, webuser.firstName, "No experience"))
+            Speaker.save(Speaker.createSpeaker(email, webuser.lastName, "", None, None, Some("https://www.gravatar.com/avatar/" + Webuser.gravatarHash(webuser.email)), None, None, webuser.firstName, "No experience"))
             Mails.sendAccessCode(webuser.email, webuser.password)
             Redirect(routes.CallForPaper.editProfile()).flashing("success" -> ("Your account has been validated. Your new password is " + webuser.password + " (case-sensitive)")).withSession("uuid" -> webuser.uuid)
         }.getOrElse {
