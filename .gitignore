@@ -9,6 +9,7 @@
 # in Dev branch, we do not want to save the application.conf file cause it contains password
 conf/application.conf
 conf/application-vdt.conf
+conf/application-vdz.conf
 db
 eclipse
 log

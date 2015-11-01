@@ -333,7 +333,7 @@ object ConferenceDescriptor {
     conferenceUrls = ConferenceUrls(
       faq = "https://voxxeddays.com/ticino16/",
       registration = "https://tickets.voxxeddays.com/event/vdt16/",
-      confWebsite = "https://voxxeddays.com/ticino/",
+      confWebsite = "https://voxxeddays.com/ticino16/",
       cfpHostname = Play.current.configuration.getString("cfp.hostname").getOrElse("cfp-vdt.exteso.com")
     ),
     timing = ConferenceTiming(

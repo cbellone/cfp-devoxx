@@ -81,7 +81,7 @@ title.help=Think carefully and try to create a title that is descriptive enough.
 summary=Summary of your presentation, for the attendee
 summary.help=Describe your proposal as it will appear on our website and mobile apps. You can use Markdown syntax.
 lang=Main language
-lang.help=100% of {0} talks are in English
+lang.help=60% of the talks will be in Italian, the other 40% will be in English. If you want to submit an Italian proposal, please write title and abstract in Italian. Thank you.
 mainSpeaker=Main speaker
 mainSpeaker2=Multiple Speakers?
 mainSpeaker.help=You can add more speakers once the proposal is created. We offer a full Combi pass for the following slots : Conference, University, Hands-on-Labs, Tools-in-Action. Quickie speakers need to purchase a conference pass!
@@ -124,13 +124,13 @@ next.action=Select next action:
 # Proposal type
 key.label=Keynote, 50mn, Thursday
 key.label.simple=Keynote
-conf.label=Conference, 50m, Thursday
+conf.label=Conference, 50m, Saturday
 conf.label.simple=Conference
 uni.label=University, 3h, Monday or Tuesday
 uni.label.simple=University
 tia.label=Tools in Action, 30mn, only Monday or Tuesday
 tia.label.simple=Tools in Action
-quick.label=Quickie, 20m, Thursday, during lunch
+quick.label=Quickie, 20m, Saturday, during lunch
 quick.label.simple=Quickie
 bof.label=Bird of a Feather, 1h, Monday to Thursday evening
 bof.label.simple=Bird of a Feather
@@ -186,10 +186,12 @@ java.label=Java
 track.cloudDevops.title=Cloud, DevOps and Tools
 track.cloudDevops.desc=Cloud-computing, DevOps, Paas, Iaas
 cloudDevops.label=Cloud & DevOps
+cldops.label=Cloud & DevOps
 
 track.bigdata.title=Big Data & Analytics
 track.bigdata.desc=From real-time analysis to massive prediction and cloud storage
 bigdata.label=Big Data & Analytics
+bigd.label=Big Data & Analytics
 
 track.future.title=Future<?>
 track.future.desc=Developing for embedded devices, the internet of things, Arduino, raspberry pi, quadcopters, robots and related
@@ -542,7 +544,7 @@ demoLevel3.label=Code only
 demoLevel4.label=No slides & code
 
 userGroup=Share my proposal with User Group?
-userGroup.checkbox=Yes, I am also interested to present this talk at other European User Groups
+userGroup.checkbox=Yes, I am also interested to present this talk at other User Groups in Ticino
 
 btn.saveDraft=Save as draft
 btn.saveAndSend=Save and Submit to committee
