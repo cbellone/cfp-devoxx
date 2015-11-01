@@ -7,16 +7,3 @@ Thanks for joining @conferenceName CFP Web site. To validate your email address,
 @validationLink
 
 The @conferenceName Team
-
-@if(ConferenceDescriptor.current().frLangEnabled) {
----------------------------------------------------------------------
-
-Bienvenue à @conferenceName !
-
-Merci de vous êtes inscrit sur le site du CFP de @conferenceName.
-Pour valider votre adresse de courrier électronique, merci d'ouvrir le lien suivant ou de le recopier dans la barre d'adresse de votre navigateur internet :
-
-@validationLink
-
-L'équipe d'organisation @conferenceName
-}
