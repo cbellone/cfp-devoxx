@@ -78,7 +78,7 @@ object ProposalConfiguration {
 
 case class ConferenceDescriptor(eventCode: String,
                                 confUrlCode: String,
-                                frLangEnabled: Boolean,
+                                itEnabled: Boolean,
                                 fromEmail: String,
                                 committeeEmail: String,
                                 bccEmail: Option[String],
@@ -138,7 +138,7 @@ object ConferenceDescriptor {
   }
 
   object ConferenceProposalConfigurations {
-    val CONF = ProposalConfiguration(id = "conf", slotsCount = 24, givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-microphone",
+    val CONF = ProposalConfiguration(id = "conf", slotsCount = 21, givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-microphone",
       chosablePreferredDay = true)
     val UNI = ProposalConfiguration(id = "uni", slotsCount = 16, givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-laptop",
       chosablePreferredDay = true)
@@ -146,7 +146,7 @@ object ConferenceDescriptor {
       chosablePreferredDay = true)
     val LAB = ProposalConfiguration(id = "lab", slotsCount = 10, givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-beaker",
       chosablePreferredDay = true)
-    val QUICK = ProposalConfiguration(id = "quick", slotsCount = 8, givesSpeakerFreeEntrance = false, freeEntranceDisplayed = false, htmlClass = "icon-fast-forward",
+    val QUICK = ProposalConfiguration(id = "quick", slotsCount = 6, givesSpeakerFreeEntrance = false, freeEntranceDisplayed = false, htmlClass = "icon-fast-forward",
       chosablePreferredDay = true)
     val BOF = ProposalConfiguration(id = "bof", slotsCount = 25, givesSpeakerFreeEntrance = false, freeEntranceDisplayed = false, htmlClass = "icon-group",
       chosablePreferredDay = false)
@@ -204,20 +204,20 @@ object ConferenceDescriptor {
 
     val ROOM3 = Room("room3", "Room 3", 345, "theatre", "camera")
     val ROOM4 = Room("room4", "Room 4", 364, "theatre", "camera")
-    val ROOM5 = Room("room5", "Room 5", 684, "theatre", "camera")
-    val ROOM6 = Room("room6", "Room 6", 407, "theatre", "camera")
-    val ROOM7 = Room("room7", "Room 7", 407, "theatre", "camera")
-    val ROOM8 = Room("room8", "Room 8", 745, "theatre", "camera")
-    val ROOM9 = Room("room9", "Room 9", 425, "theatre", "camera")
+    val ROOMB1 = Room("roomB1", "Room B1", 684, "theatre", "camera")
+    val ROOMC = Room("roomC", "Room C", 407, "theatre", "camera")
+    val ROOMB2 = Room("roomB2", "Room B2", 407, "theatre", "camera")
+    val ROOMB = Room("roomB", "Room B", 745, "theatre", "camera")
+    val ROOMB3 = Room("roomB3", "Room B3", 425, "theatre", "camera")
 
     val BOF1 = Room("bof1", "BOF 1", 70, "classroom", "camera")
     val BOF2 = Room("bof2", "BOF 2", 70, "classroom", "camera")
 
-    val keynoteRoom = List(ROOM8)
+    val keynoteRoom = List(ROOMB)
 
-    val allRoomsConf = List(ROOM5, ROOM9, ROOM6, ROOM7)
+    val allRoomsConf = List(ROOMB1, ROOMB3, ROOMC)
 
-    val allRooms = List(ROOM8, ROOM5, ROOM9, ROOM6, ROOM7, HALL_EXPO)
+    val allRooms = List(ROOMB, ROOMB1, ROOMB3, ROOMC, ROOMB2, HALL_EXPO)
   }
 
   object ConferenceSlotBreaks {
@@ -228,82 +228,86 @@ object ConferenceDescriptor {
     val shortBreak = SlotBreak("chgt", "Break", "Pause courte", ConferenceRooms.HALL_EXPO)
     val exhibition = SlotBreak("exhib", "Exhibition", "Exhibition", ConferenceRooms.HALL_EXPO)
     val meetAndGreet = SlotBreak("meet", "Meet & Greet (Exhibition)", "Exhibition", ConferenceRooms.HALL_EXPO)
-    val eveningKeynote = SlotBreak("evKey", "Evening Keynote", "Keynote", ConferenceRooms.ROOM8)
-    val closingKeynote = SlotBreak("closeKey", "Closing Keynote", "Keynote", ConferenceRooms.ROOM8)
+    val eveningKeynote = SlotBreak("evKey", "Evening Keynote", "Keynote", ConferenceRooms.ROOMB)
+    val closingKeynote = SlotBreak("closeKey", "Closing Keynote", "Keynote", ConferenceRooms.ROOMB)
     val movieSpecial = SlotBreak("movie", "Closing keynote 19:00-19:30 - Movie 20:00-22:00", "Movie", ConferenceRooms.HALL_EXPO)
     val noxx = SlotBreak("noxx", "Noxx party", "Soirée au Noxx", ConferenceRooms.HALL_EXPO)
   }
 
   object ConferenceSlots {
 
-    val quickiesSlotsThursday: List[Slot] = {
+    val quickiesSlotsSaturday: List[Slot] = {
 
-      val quickiesThursdayLunch1 = ConferenceRooms.allRoomsConf.map {
+      val quickiesSaturdayLunch1 = ConferenceRooms.allRoomsConf.map {
         r1 =>
-          SlotBuilder(ConferenceProposalTypes.QUICK.id, "thursday", new DateTime("2016-03-03T12:10:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T12:30:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r1)
+          SlotBuilder(ConferenceProposalTypes.QUICK.id, "saturday", new DateTime("2016-04-30T12:10:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T12:30:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r1)
       }
-      val quickiesThursdayLunch2 = ConferenceRooms.allRoomsConf.map {
+      val quickiesSaturdayLunch2 = ConferenceRooms.allRoomsConf.map {
         r2 =>
-          SlotBuilder(ConferenceProposalTypes.QUICK.id, "thursday", new DateTime("2016-03-03T12:40:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T13:00:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r2)
+          SlotBuilder(ConferenceProposalTypes.QUICK.id, "saturday", new DateTime("2016-04-30T12:40:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T13:00:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r2)
       }
-      quickiesThursdayLunch1 ++ quickiesThursdayLunch2
+      quickiesSaturdayLunch1 ++ quickiesSaturdayLunch2
     }
 
     // CONFERENCE KEYNOTES
 
-    val keynoteSlotsThursday: List[Slot] = {
+    val keynoteSlotssaturday: List[Slot] = {
 
-      val keynoteThursdaySlot1 = ConferenceRooms.keynoteRoom.map {
+      val keynoteSaturdaySlot1 = ConferenceRooms.keynoteRoom.map {
         r1 =>
-          SlotBuilder(ConferenceProposalTypes.KEY.id, "thursday",
-            new DateTime("2016-03-03T09:15:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")),
-            new DateTime("2016-03-03T10:00:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r1)
+          SlotBuilder(ConferenceProposalTypes.KEY.id, "saturday",
+            new DateTime("2016-04-30T09:15:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")),
+            new DateTime("2016-04-30T10:00:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r1)
       }
-      keynoteThursdaySlot1
+      keynoteSaturdaySlot1
     }
 
     // CONFERENCE SLOTS
 
-    val conferenceSlotsThursday: List[Slot] = {
+    val conferenceSlotsSaturday: List[Slot] = {
 
-      val conferenceThursdaySlot1 = ConferenceRooms.allRoomsConf.map {
+      val conferenceSaturdaySlot1 = ConferenceRooms.allRoomsConf.map {
         r1 =>
-          SlotBuilder(ConferenceProposalTypes.CONF.id, "thursday", new DateTime("2016-03-03T10:15:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T11:05:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r1)
+          SlotBuilder(ConferenceProposalTypes.CONF.id, "saturday", new DateTime("2016-04-30T10:30:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T11:20:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r1)
       }
-      val conferenceThursdaySlot2 = ConferenceRooms.allRoomsConf.map {
+      val conferenceSaturdaySlot2 = ConferenceRooms.allRoomsConf.map {
         r2 =>
-          SlotBuilder(ConferenceProposalTypes.CONF.id, "thursday", new DateTime("2016-03-03T11:15:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T12:05:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r2)
+          SlotBuilder(ConferenceProposalTypes.CONF.id, "saturday", new DateTime("2016-04-30T11:30:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T12:20:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r2)
       }
-      val conferenceThursdaySlot3 = ConferenceRooms.allRoomsConf.map {
+      val conferenceSaturdaySlot3 = ConferenceRooms.allRoomsConf.map {
         r3 =>
-          SlotBuilder(ConferenceProposalTypes.CONF.id, "thursday", new DateTime("2016-03-03T13:10:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T14:00:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r3)
+          SlotBuilder(ConferenceProposalTypes.CONF.id, "saturday", new DateTime("2016-04-30T12:30:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T13:20:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r3)
       }
-      val conferenceThursdaySlot4 = ConferenceRooms.allRoomsConf.map {
+      val conferenceSaturdaySlot4 = ConferenceRooms.allRoomsConf.map {
         r4 =>
-          SlotBuilder(ConferenceProposalTypes.CONF.id, "thursday", new DateTime("2016-03-03T14:10:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T15:00:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r4)
+          SlotBuilder(ConferenceProposalTypes.CONF.id, "saturday", new DateTime("2016-04-30T14:20:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T15:10:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r4)
       }
 
-      val conferenceThursdaySlot5 = ConferenceRooms.allRoomsConf.map {
+      val conferenceSaturdaySlot5 = ConferenceRooms.allRoomsConf.map {
         r5 =>
-          SlotBuilder(ConferenceProposalTypes.CONF.id, "thursday", new DateTime("2016-03-03T15:30:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T16:20:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r5)
+          SlotBuilder(ConferenceProposalTypes.CONF.id, "saturday", new DateTime("2016-04-30T15:20:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T16:10:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r5)
       }
-      val conferenceThursdaySlot6 = ConferenceRooms.allRoomsConf.map {
+      val conferenceSaturdaySlot6 = ConferenceRooms.allRoomsConf.map {
         r6 =>
-          SlotBuilder(ConferenceProposalTypes.CONF.id, "thursday", new DateTime("2016-03-03T16:30:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T17:20:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r6)
+          SlotBuilder(ConferenceProposalTypes.CONF.id, "saturday", new DateTime("2016-04-30T16:40:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T17:20:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r6)
+      }
+      val conferenceSaturdaySlot7 = ConferenceRooms.allRoomsConf.map {
+        r6 =>
+          SlotBuilder(ConferenceProposalTypes.CONF.id, "saturday", new DateTime("2016-04-30T17:30:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T18:20:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), r6)
       }
 
-      conferenceThursdaySlot1 ++ conferenceThursdaySlot2 ++ conferenceThursdaySlot3 ++ conferenceThursdaySlot4 ++ conferenceThursdaySlot5 ++ conferenceThursdaySlot6
+      conferenceSaturdaySlot1 ++ conferenceSaturdaySlot2 ++ conferenceSaturdaySlot3 ++ conferenceSaturdaySlot4 ++ conferenceSaturdaySlot5 ++ conferenceSaturdaySlot6 ++ conferenceSaturdaySlot7
     }
 
-    val thursdayBreaks = List(
-      SlotBuilder(ConferenceSlotBreaks.petitDej, "thursday", new DateTime("2016-03-03T10:00:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T10:15:00.000+01:00"))
-      , SlotBuilder(ConferenceSlotBreaks.lunch, "thursday", new DateTime("2016-03-03T12:05:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T13:05:00.000+01:00"))
-      , SlotBuilder(ConferenceSlotBreaks.coffee, "thursday", new DateTime("2016-03-03T14:25:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T14:55:00.000+01:00"))
-      , SlotBuilder(ConferenceSlotBreaks.meetAndGreet, "thursday", new DateTime("2016-03-03T17:15:00.000+01:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-03-03T18:00:00.000+01:00"))
+    val saturdayBreaks = List(
+      SlotBuilder(ConferenceSlotBreaks.petitDej, "Saturday", new DateTime("2016-04-30T10:00:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T10:30:00.000+02:00"))
+      , SlotBuilder(ConferenceSlotBreaks.lunch, "Saturday", new DateTime("2016-04-30T13:20:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T14:20:00.000+02:00"))
+      , SlotBuilder(ConferenceSlotBreaks.coffee, "Saturday", new DateTime("2016-04-30T16:10:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T16:40:00.000+02:00"))
+      , SlotBuilder(ConferenceSlotBreaks.meetAndGreet, "Saturday", new DateTime("2016-04-30T18:30:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Zurich")), new DateTime("2016-04-30T19:00:00.000+02:00"))
     )
 
-    val thursday: List[Slot] = {
-      thursdayBreaks ++ keynoteSlotsThursday ++ conferenceSlotsThursday ++ quickiesSlotsThursday
+    val saturday: List[Slot] = {
+      saturdayBreaks ++ keynoteSlotssaturday ++ conferenceSlotsSaturday ++ quickiesSlotsSaturday
     }
 
     val wednesday: List[Slot] = List.empty
@@ -313,42 +317,42 @@ object ConferenceDescriptor {
     // COMPLETE DEVOXX
 
     def all: List[Slot] = {
-      thursday
+      saturday
     }
   }
 
   def current() = ConferenceDescriptor(
-    eventCode = "VDZ16",
+    eventCode = "VDT16",
     // You will need to update conf/routes files with this code if modified
-    confUrlCode = "VDZ16",
-    frLangEnabled = false,
+    confUrlCode = "VDT16",
+    itEnabled = true,
     fromEmail = Play.current.configuration.getString("mail.from").getOrElse("info@exteso.com"),
     committeeEmail = Play.current.configuration.getString("mail.committee.email").getOrElse("info@exteso.com"),
     bccEmail = Play.current.configuration.getString("mail.bcc"),
     bugReportRecipient = Play.current.configuration.getString("mail.bugreport.recipient").getOrElse("info@exteso.com"),
     conferenceUrls = ConferenceUrls(
-      faq = "https://voxxeddays.com/zurich16/",
-      registration = "https://tickets.voxxeddays.com/event/vdz16/",
-      confWebsite = "https://voxxeddays.com/zurich16/",
-      cfpHostname = Play.current.configuration.getString("cfp.hostname").getOrElse("cfp.exteso.com")
+      faq = "https://voxxeddays.com/ticino16/",
+      registration = "https://tickets.voxxeddays.com/event/vdt16/",
+      confWebsite = "https://voxxeddays.com/ticino/",
+      cfpHostname = Play.current.configuration.getString("cfp.hostname").getOrElse("cfp-vdt.exteso.com")
     ),
     timing = ConferenceTiming(
-      datesI18nKey = "3rd March 2016",
+      datesI18nKey = "30th April 2016",
       speakersPassDuration = 1,
       preferredDayEnabled = false,
       firstDayFr = "8 avril",
-      firstDayEn = "March 3rd",
+      firstDayEn = "April 30th",
       datesFr = "du 8 au 10 avril 2015",
-      datesEn = "3rd of March, 2016",
-      cfpOpenedOn = DateTime.parse("2015-09-14T00:00:00+02:00"),
-      cfpClosedOn = DateTime.parse("2015-11-30T23:59:59+01:00"),
-      scheduleAnnouncedOn = DateTime.parse("2016-01-15T00:00:00+01:00")
+      datesEn = "30th of April, 2016",
+      cfpOpenedOn = DateTime.parse("2015-11-10T00:00:00+01:00"),
+      cfpClosedOn = DateTime.parse("2016-02-15T23:59:59+01:00"),
+      scheduleAnnouncedOn = DateTime.parse("2016-03-15T00:00:00+01:00")
     ),
     hosterName = "", hosterWebsite = "",
-    hashTag = "#VDZ16",
+    hashTag = "#VDT16",
     conferenceSponsor = ConferenceSponsor(showSponsorProposalCheckbox = true, sponsorProposalType = ConferenceProposalTypes.CONF)
-    , List("en_GB")
-    , "Arena Cinema Sihlcity, Kalanderplatz 8, CH-8045 Zürich"
+    , List("en_GB", "it")
+    , "Palazzo dei Congressi, 6900 Lugano"
     ,showQuestion=false
   )
 
