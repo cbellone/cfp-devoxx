@@ -1,19 +1,19 @@
 # -----------------
 # Main conference details
-CONF.title=Voxxed Days Zürich 2016
+CONF.title=Voxxed Days Ticino 2016
 CONF.subtitle=
 
 # Equivalent to ConferenceNaming
-shortYearlyName=Voxxed Days Zürich 16
-longYearlyName=Voxxed Days Zürich 2016
-shortName=Voxxed Days Zürich
-longName=Voxxed Days Zürich 2016 CFP
+shortYearlyName=Voxxed Days Ticino 16
+longYearlyName=Voxxed Days Ticino 2016
+shortName=Voxxed Days Ticino
+longName=Voxxed Days Ticino 2016 CFP
 longSplittedName_whiteStart=Voxxed Days
-longSplittedName_colored=Zürich
+longSplittedName_colored=Ticino
 longSplittedName_whiteEnd=2016
-conference.dates=3rd March
+conference.dates=30th April
 # -----------------
-cfp.title=Voxxed Days Zürich 2016 CFP
+cfp.title=Voxxed Days Ticino 2016 CFP
 login.error=Invalid email or password
 menu.home=Home
 menu.register=Sign-in
@@ -161,10 +161,10 @@ cfp.program.date=from {0}
 video.title=Videos
 video.tag=Review Voxxed Days Ticino 2015''s videos on
 theme.title=Tracks
-theme.track=List of tracks for Voxxed Days Zürich 2016:
+theme.track=List of tracks for Voxxed Days Ticino 2016:
 track.title=Title
 track.description=Description
-appel.conf.dates=Voxxed Days Zürich 2016, 3rd March 2016
+appel.conf.dates=Voxxed Days Ticino 2016, 30th April 2016
 
 # Tracks
 track.webmobile.title=Web, Mobile &  UX
