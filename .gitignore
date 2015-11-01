@@ -13,6 +13,8 @@ conf/application-be.conf
 conf/application-pl.conf
 conf/application-uk.conf
 conf/application-fr.conf
+conf/application-vdt.conf
+conf/application-vdz.conf
 db
 eclipse
 log
