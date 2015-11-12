@@ -345,8 +345,8 @@ object ConferenceDescriptor {
       datesFr = "du 8 au 10 avril 2015",
       datesEn = "30th of April, 2016",
       cfpOpenedOn = DateTime.parse("2015-11-10T00:00:00+01:00"),
-      cfpClosedOn = DateTime.parse("2016-02-15T23:59:59+01:00"),
-      scheduleAnnouncedOn = DateTime.parse("2016-03-15T00:00:00+01:00")
+      cfpClosedOn = DateTime.parse("2016-01-25T23:59:59+01:00"),
+      scheduleAnnouncedOn = DateTime.parse("2016-03-01T00:00:00+01:00")
     ),
     hosterName = "", hosterWebsite = "",
     hashTag = "#VDT16",
