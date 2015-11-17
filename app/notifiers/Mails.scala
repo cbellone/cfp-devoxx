@@ -279,7 +279,7 @@ object Mails {
   def sendInvitationForSpeaker(speakerEmail: String, message: String, requestId: String) = {
     val emailer = current.plugin[MailerPlugin].map(_.email).getOrElse(sys.error("Problem with the MailerPlugin"))
     val shortYearlyName = Messages("shortYearlyName")
-    emailer.setSubject(s"$shortYearlyName special request")
+    emailer.setSubject(s"What about speaking at $shortYearlyName?")
     emailer.addFrom(from)
     emailer.addRecipient(speakerEmail)
     bcc.map(bccEmail => emailer.addBcc(bccEmail))
