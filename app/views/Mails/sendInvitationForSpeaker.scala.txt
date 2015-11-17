@@ -18,5 +18,5 @@ If you are interested and you would like to propose a talk for @Messages("shortN
   Please, visit this URL : https://@ConferenceDescriptor.current().conferenceUrls.cfpHostname@routes.Wishlist.speakerDeclineRequest(requestId)
 
 Thanks,
-The Devoxx team.
+The @Messages("longName") team.
 
