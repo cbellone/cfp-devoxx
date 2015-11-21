@@ -1,94 +1,46 @@
 @()(implicit lang: Lang, flash: Flash, req: RequestHeader)
 
-@views.html.Publisher.devoxxFR2015("Schedule", Some("Devoxx FR 2015 agenda")) {
+@views.html.Publisher.programHome("Schedule", Some("Voxxed Days Zürich 2016 agenda")) {
 
-    <div class="large-12 column">
-        <img src="/assets/images/banniere_devoxx_france_2015.png" alt="Devoxx France 2015" title="Programme">
-    </div>
     <div class="small-12 medium-8 large-8 columns">
         <div class="input-wrap">
             <form name="search" action="@routes.Publisher.search(None, None)" method="GET">
                 <label for="search">
-                    Trouver un sujet ou un présentateur : </label> <input type="search" name="q" value="" placeholder="title, keyword or speaker" class="wpcf7-form-control wpcf7-text" >
+                    Find Talk or speaker : </label> <input type="search" name="q" value="" placeholder="title, keyword or speaker" class="wpcf7-form-control wpcf7-text" >
             </form>
         </div>
     </div>
     <div class="small-6 medium-6 large-6 column">
-        <h4>Horaires d'accueil</h4>
+        <h4>Start time</h4>
         <ul>
-            <li><strong>Mercredi 8 avril</strong> - à partir de 8h00</li>
-            <li><strong>Jeudi 9 avril</strong> - à partir de 7h00</li>
-            <li><strong>Vendredi 10 avril</strong> - à partir de 7h30</li>
+            <li><strong>Thursday 3rd March</strong> - from 8:00</li>
         </ul>
     </div>
     <div class="small-6 medium-6 large-6 column">
-        <h4>Programme par journée</h4>
+        <h4>Program</h4>
         <ul>
-            <li><a href="/2015/byday/wednesday">Mercredi 8 avril</a>
-            <li><a href="/2015/byday/thursday">Jeudi 9 avril</a>
-            <li><a href="/2015/byday/friday">Vendredi 10 avril</a>
+            <li><a href="/2016/byday/thursday">Thu 3rd</a>
         </ul>
     </div>
 
     <div class="small-12 medium-6 large-6 column">
-        <h3>Keynotes</h3>
-        <p>Les plénières d'ouverture (keynote) vous donnent rendez-vous cette année le jeudi à 9h précise.
-            A l'occasion de l'anniversaire du langage Java, notre thème de keynote est "20 ans". Venez découvrir la vision
-            de présentateurs préstigieux, qui vous emmenent dans 20 ans. Robotique, génétique, crypto-monnaie, cloud-computing,
-            nous vous proposons des keynotes techniques cette année.
-        </p>
-        <p><A href="@routes.Publisher.showByTalkType("key")">Liste des Keynotes</A></p>
+        <h3>Keynote</h3>
+        <p>We're very pleased to announce that this year's Keynote will be held by Jonas Bonér (Typesafe CTO, Akka creator)</p>
+        <p><A href="@routes.Publisher.showByTalkType("key")">Go to keynote</A></p>
     </div>
 
     <div class="small-12 medium-6 large-6 column">
         <h3>Conference</h3>
-        <p>Les conférences sont des présentations de 45mn, le jeudi et le vendredi. C'est le format le plus représenté, avec plus de 88 conférences
-            pendant 2 jours. Toutes les sessions sont filmées, ce qui vous permet de revoir plus tard les conférences.</p>
-        <p><A href="@routes.Publisher.showByTalkType("conf")">Liste des Conférences</A></p>
+        <p>The main talks. 24 great 50-min session</p>
+        <p><A href="@routes.Publisher.showByTalkType("conf")">Go to conference talks</A></p>
     </div>
 
-    <div class="small-12 medium-6 large-6 column">
-        <h3>University</h3>
-        <p>Les Universités sont des sessions longues de 3h, le mercredi, de 2 x 75 minutes. Avec une salle en plus en 2015, Devoxx France propose 10 universités.</p>
-        <p><A href="@routes.Publisher.showByTalkType("uni")">Liste des Universités</A></p>
-
-    </div>
-
-    <div class="clearfix"></div>
-
-    <div class="small-12 medium-6 large-6 column">
-        <h3>Tools in Action</h3>
-        <p>Les 35 TIA (Tools-in-Action) sont des sessions courtes de 25mn, destinées à présenter un outil, une pratique logiciel ou une solution.</p>
-        <p>Pour la 4ème édition de Devoxx France, les TIA auront lieu le mercredi et le jeudi en fin de journée.</p>
-        <p><A href="@routes.Publisher.showByTalkType("tia")">Liste des Tools in Action</A></p>
-    </div>
-
-    <div class="small-12 medium-6 large-6 column">
-        <h3>Hands-on Labs</h3>
-        <p>Session pratique de 3h, dans des salles de 25 à 60 personnes. Les Labs sont des sessions pratiques le mercredi et le jeud, qui permettent
-            de découvrir ou d'approfondir un sujet. Les Labs se déroulent essentiellement le mercredi, ainsi que quelques Labs le jeudi après-midi.</p>
-        <p><A href="@routes.Publisher.showByTalkType("lab")">Liste des Hands-on Labs</A></p>
-    </div>
     <div class="clearfix"></div>
 
     <div class="small-12 medium-6 large-6 column">
         <h3>Quickies</h3>
-        <p>Les Quickies sont des sessions courtes de 15 minutes, pendant l'heure du déjeuner jeudi et vendredi. C'est LE format
-            dédié aux débutants, mais aussi aux experts qui n'ont que 15mn pour vous convaincre. Le format simple et rapide permet
-            de découvrir un projet ou une idée pendant l'heure du repas. Cette année, l'équipe a sélectionné 34 Quickies.</p>
-        <p><A href="@routes.Publisher.showByTalkType("quick")">Liste des Quickies</A></p>
-    </div>
-
-
-    <div class="small-12 medium-6 large-6 column">
-        <h3>BOF</h3>
-        <p>Les <a href="http://en.wikipedia.org/wiki/Birds_of_a_feather_%28computing%29">BOF (Bird of a feather)</a>
-            sont des sessions mythiques de Devoxx France, à partir de 19h30 le jeudi soir.
-            C'est LE point de rendez-vous des user-groups, des communautés, des meetups, bref de tous les groupes communautaires de passionnés.
-            Passez d'une session du ParisJS pour échanger ensuite avec les membres du Paris Scala User Group, les BOFs se déroulent
-            le soir de la soirée Meet-and-Greet.</p>
-
-        <p><A href="@routes.Publisher.showByTalkType("bof")">Liste des B.O.Fs</A></p>
+        <p>20 minutes for future Rock Stars, 8 sessions during lunch. Don't miss them!</p>
+        <p><A href="@routes.Publisher.showByTalkType("quick")">Go to quickies</A></p>
     </div>
 
     <div class="clearfix"></div>

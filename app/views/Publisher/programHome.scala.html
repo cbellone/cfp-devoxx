@@ -1,0 +1,118 @@
+@(title: String, description:Option[String]=None)(content: Html)(implicit lang: Lang, req: RequestHeader)
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="Robots" content="index,follow" />
+        <meta name="description" content="@description" />
+
+        <title>@title | @Messages("longName")</title>
+        <style>
+            div.main-menu {
+                width: 100%;
+                z-index: 9999;
+                top: 0;
+                position: fixed;
+                text-transform: uppercase;
+                height: 61px;
+            }
+            .main-menu {
+                background-color: #56c2f0;
+            }
+            .main-menu a, .main-menu a:hover {
+                color: white;
+            }
+        </style>
+        <link rel='stylesheet' id='google_fonts_style-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C700%7CRoboto+Slab%7CRaleway%3A400%2C200%2C700&#038;ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='clear_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/clear.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='carouFredSel_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/carouFredSel.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='default_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/default.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='columns_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/columns.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='columns_with_border_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/columns_with_border.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='common_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/common.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='prettyPhoto_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/prettyPhoto.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='comments_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/comments.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='colors_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/colors.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='standard_wp_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/wp.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='typography_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/typography.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='main_theme_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/style.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='responsive_style-css'  href='https://voxxeddays.com/zurich16/wp-content/themes/flatty7/css/responsive.css?ver=4.2.2' type='text/css' media='all' />
+        <!-- Custom style for CFP by Nicolas -->
+        <link rel='stylesheet'  href='@routes.Assets.at(path="/public",file="vdz16/vdz16.css")' type='text/css' media='all' />
+        <link rel='stylesheet'  href='@routes.Assets.at(path="/public",file="vdz16/schedule.css")' type='text/css' media='all' />
+</head>
+
+
+
+<body class="home">
+<div class="main-menu">
+    <nav class="center-relative">
+        <ul>
+            <li><a href="https://voxxeddays.com/zurich16/#np-855">Home</a></li>
+            <li><a href="https://voxxeddays.com/zurich16/#np-1479">About</a></li>
+            <li><a href="https://voxxeddays.com/zurich16/#np-3622">Speakers</a></li>
+            <li><a href="@routes.Publisher.homePublisher()">Schedule</a></li>
+            <li><a href="https://voxxeddays.com/zurich16/#np-1595">Tickets</a></li>
+            <li><a href="https://voxxeddays.com/zurich16/sponsors/sponsorship/">Sponsorship</a></li>
+            <li><a href="https://voxxeddays.com/zurich16/#np-3016">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+	<!-- Blog Section -->
+	<section id="blog-posts-two">
+	    <!-- Blog Post -->
+	    <div class="row blog-post single-blog-post">
+	        <div class="large-12 large-centered columns single-page">
+	            <div class="single-content single-content-page row">
+                    <div class="large-12 column" style="margin-top: 30px;">
+                        <img width="380" class="img-responsive aligncenter" src="https://voxxeddays.com/zurich16/wp-content/uploads/sites/10/2015/04/Voxxed-Days-Logo-ZÜRICH_BlackBlue.jpg">
+                    </div>
+<!-- ************** Begin generated content by Play ************************ //-->
+@content
+<!--  ************* End generated content by Play ************************** //-->
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+<footer class="clear center-text">
+    <div class="crete-round-font bottom-70"><div class="center-relative" style="max-width:720px; color:#e3e7e8">Contact us on social networks! </div></div>
+
+    <div class="footer-social ">
+        <a href="https://twitter.com/voxxedzurich" target="_blank"><img src="//voxxeddays.com/ticino15/wp-content/uploads/sites/3/2014/11/twitter.png" alt="" /></a>
+    </div>
+
+    <br /><br /><br />
+
+    <style>
+
+        .small-menu-wrapper select.small-menu {
+            -webkit-appearance:menulist!important;
+            background-image:none!important;
+        }
+
+        .team {
+            max-width: 295px !important;
+        }
+        .event-intro {
+            background-color: rgba(249, 249, 249, 0.91);
+            color: #020202;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .contact-form input {
+            min-height:40px !important;
+        }
+        .contact-form textarea{
+            min-height:120px !important;
+        }
+    </style>
+</footer>
+
+
+</body>
+</html>
+

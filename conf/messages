@@ -472,7 +472,7 @@ day-bof=Thursday, 19h30
 day-monday=Monday, 10th November
 day-tuesday=Tuesday, 11th November
 day-wednesday=Wednesday, 12th November
-day-thursday=Thursday, 9th April
+day-thursday=Thursday, 3rd March
 day-friday=Friday, 14th November
 
 sw.all.confThursday=Conferences on Thursday
@@ -685,11 +685,11 @@ speaker.ar1=Please click
 speaker.ar2=here
 speaker.ar3=to review and to validate Terms and Conditions.
 
-tagRenderRow-coffee=Coffee
-tagRenderRow-lunch=Lunch
+tagRenderRow-coffee=Coffee Break
+tagRenderRow-lunch=Lunch Break
 tagRenderRow-dej=Breakfast
 tagRenderRow-reg=Registration, welcome and Breakfast
 tagRenderRow-chgt=Short break
-tagRenderRow-meet=Soirée Meet & Greet
+tagRenderRow-meet=Meet & Greet
 please.check.approved=Please, review the list of approved Proposals, then select accept or decline for each Talk.
 proposal.approved.noVotes=Approved proposal - no more votes
