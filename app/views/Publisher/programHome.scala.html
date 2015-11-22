@@ -111,9 +111,25 @@
         .contact-form textarea{
             min-height:120px !important;
         }
+        
+        img.emoji {
+         height: 1em;
+         width: 1em;
+         margin: 0 .05em 0 .1em;
+         vertical-align: -0.1em;
+        }
     </style>
 </footer>
 
+        <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var l = document.querySelectorAll("strong,h1,h2,h3,h4,h5,h6");
+            for(var i = 0; i < l.length;i++) {
+              twemoji.parse(l[i])
+            }
+          }, false);
+        </script>
 
 </body>
 </html>
