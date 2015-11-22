@@ -29294,3 +29294,8 @@ img.speakerRound {
 margin-bottom: 1.25rem;
 border: solid 1px #dddddd;
 }
+
+
+.additional-bottom-margin {
+ margin-bottom: 1em;
+}
