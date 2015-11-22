@@ -84,18 +84,17 @@ lang=Main language
 lang.help=60% of the talks will be in Italian, the other 40% will be in English. If you want to submit an Italian proposal, please write title and abstract in Italian. Thank you.
 mainSpeaker=Main speaker
 mainSpeaker2=Multiple Speakers?
-mainSpeaker.help=You can add more speakers once the proposal is created. We offer a full Combi pass for the following slots : Conference, University, Hands-on-Labs, Tools-in-Action. Quickie speakers need to purchase a conference pass!
+mainSpeaker.help=You can add more speakers once the proposal is created. We offer a free pass for the Conference slots. Quickie speakers need to purchase a conference pass!
 otherSpeakers=Other speakers
 talkType=Type of talk
-talkType.help=Each type of talk is described on the <a href\="{0}\#confType" target\="new">FAQ</a>.
+talkType.help=Each type of talk is described on the <a href="{0}#sec-schedule" target="_blank">FAQ</a>.
 
 audienceLevel=Audience level :
 audienceLevel.help=Please, indicate the required audience level for your talk:\
 1- for all audience, beginner or novice\
 2- for intermediate, talented\
 3- experienced, proficient\
-4- expert, senior \
-
+4- expert, senior
 
 privateMessage=Message for the program committee, motivation for your presentation
 privateMessage.help=Write here any important details about your presentation, that the program committee should know. You can also set here the URL to your slides, or a link to an existing online talk for example on Parleys.com.
