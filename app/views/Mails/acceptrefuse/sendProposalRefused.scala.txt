@@ -7,7 +7,7 @@ we received a lot of proposals and the available slots are very limited.
 Proposition title : @proposal.title, @Messages(proposal.talkType.id).
 
 We would like to thank you sincerely for your proposal.
-Hopefully we can still welcome you as a Devoxxian, registration details
+Hopefully we can still welcome you as a @Messages("sw.speakers"), registration details
 
 @ConferenceDescriptor.current().conferenceUrls.registration
 
