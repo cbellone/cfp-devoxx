@@ -1,6 +1,6 @@
 @(proposals: Iterable[Proposal], talkType: String)(implicit lang: Lang, flash: Flash, req: RequestHeader)
-@views.html.Publisher.devoxxFR2015(Messages(talkType)) {
-    <div class="large-12">
+@views.html.Publisher.programHome(Messages(talkType)) {
+    <div class="col-xs-12">
         <h3>@Messages(talkType)</h3>
         <p class="breadcrumb">
             <a href="@routes.Publisher.homePublisher()">@Messages("sw.home")</a> &gt; @Messages("sw.all." + talkType)
@@ -9,12 +9,12 @@
 
     @proposals.groupBy(_.track).sliding(3,3).map { case oneRow =>
         @oneRow.map{ case(track:Track, proposalsTrack:List[Proposal])=>
-            <div class="large-3 columns trackBox">
+            <div class="col-xs-4 trackBox">
                 @tags.publisher.renderIconForTrack(track) @Messages(track.label)
-            <ul>
+            <ul class="list-unstyled">
             @proposalsTrack.sortBy(_.title).map { proposal: Proposal =>
                 <li>
-                    <strong>@proposal.title</strong>  <a href="@routes.Publisher.showDetailsForProposal(proposal.id, proposal.escapedTitle)"> - détails </a>
+                    <strong>@proposal.title</strong>  <a href="@routes.Publisher.showDetailsForProposal(proposal.id, proposal.escapedTitle)"> - details </a>
                     <br>
                     @proposal.allSpeakerUUIDs.map { speakerUUID =>
                         @tags.publisher.renderSpeaker(speakerUUID)

@@ -1,0 +1,209 @@
+@(title: String, description:Option[String]=None)(content: Html)(implicit lang: Lang, req: RequestHeader)
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="Robots" content="index,follow" />
+        <meta name="description" content="@description" />
+
+        <title>@title | @Messages("longName")</title>
+        <style>
+            div.main-menu {
+                width: 100%;
+                z-index: 9999;
+                top: 0;
+                position: fixed;
+                text-transform: uppercase;
+                height: 61px;
+            }
+            .main-menu {
+                background-color: #56c2f0;
+            }
+            .main-menu a, .main-menu a:hover {
+                color: white;
+            }
+        </style>
+
+        <!-- begin gather -->
+        <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+        }
+        </style>
+        <link rel='stylesheet' id='gathercssplugins-css-css'  href='https://voxxeddays.com/ticino16/wp-content/themes/gather/css/plugins/plugins.css?ver=4.2.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='gathertheme-style-css'  href='https://voxxeddays.com/ticino16/wp-content/themes/gather/style.css?ver=2015-8-4' type='text/css' media='all' />
+        <link rel='stylesheet' id='gathertheme-color-css'  href='https://voxxeddays.com/ticino16/wp-content/themes/gather/skins/blue.css?ver=4.2.2' type='text/css' media='screen' />
+        <link rel='stylesheet' id='gathercustom-style-css'  href='https://voxxeddays.com/ticino16/wp-content/themes/gather/css/custom.css?ver=4.2.2' type='text/css' media='all' />
+        <style id='gathercustom-style-inline-css' type='text/css'>
+        .header.parallax-bg {
+        background-image:url('https://voxxeddays.com/ticino16/wp-content/uploads/sites/14/2015/11/lago.jpg');
+        height: 650px;
+        background-size: contain;
+        background-position:0 -48px;
+        }
+
+
+        /* no background in responsive mode */
+            @@media (max-width: 768) {
+        .header.parallax-bg {
+        background-image: none;
+        background-color:black;
+        }
+        }
+
+
+
+        /* location and date in header*/
+
+        div.header-location-date {
+        background-color: rgba(255,255,255,0.5) !important;
+        border-radius: 3px !important;
+        padding:7px;
+        }
+
+        .header-button-top-margin {
+        margin-top:14px;
+        }
+
+        .section-after-header {
+        padding-top:28px;
+        }
+
+        .section-gray {
+        background-color: #f1f1f1 !important;
+        }
+
+        /* images for profile */
+        img.max-h-100 {
+        max-height:100px;
+        }
+
+        #sec-tickets ul {
+        margin:0;
+        padding: 0;
+        list-style-type:none;
+        }
+        .header_top-bg{background-image:none;}.header_bottom-bg{background-image:none;}.footer_bottom-bg{background-image:none;}
+        footer {
+            background-color:white!important;
+        }
+        .breadcrumb a {
+            color: black !important;
+        }
+        </style>
+
+        <!-- end -->
+
+        <link rel='stylesheet' id='google_fonts_style-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C700%7CRoboto+Slab%7CRaleway%3A400%2C200%2C700&#038;ver=4.2.2' type='text/css' media='all' />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Custom style for CFP by Nicolas -->
+        <link rel='stylesheet'  href='@routes.Assets.at(path="/public",file="vdt16/vdt16.css")' type='text/css' media='all' />
+        <link rel='stylesheet'  href='@routes.Assets.at(path="/public",file="vdt16/schedule.css")' type='text/css' media='all' />
+</head>
+
+
+
+    <body class="home page page-id-1598 page-template page-template-homepage-onepage page-template-homepage-onepage-php" data-spy="scroll" data-target="#navbar" data-offset="100">
+<div class="main-menu">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://voxxeddays.com/ticino16/">
+                    <img src="http://voxxeddays.com/ticino16/wp-content/uploads/sites/14/2014/11/logo-voxxed-ticino.png" width="106" height="31" class="responsive-img logo-vis" alt="Voxxed Days Ticino" />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul id="menu-vdt16-gather-menu" class="gather_main-nav nav navbar-nav navbar-right"><li id="menu-item-4700" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4700"><a title="ABOUT" href="#sec-about">ABOUT</a></li>
+                    <li id="menu-item-4701" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4701"><a title="SCHEDULE" href="#sec-schedule">SCHEDULE</a></li>
+                    <li id="menu-item-4702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4702"><a title="TEAM" href="#sec-team">TEAM</a></li>
+                    <li id="menu-item-4703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4703"><a title="TICKETS" href="#sec-tickets">TICKETS</a></li>
+                    <li id="menu-item-4735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4735"><a title="Code of Conduct" href="https://voxxeddays.com/ticino16/code-of-conduct/">Code of Conduct</a></li>
+                    <li id="menu-item-4705" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4705"><a title="CONTACT" href="#sec-contact">CONTACT</a></li>
+                </ul>
+            </div>
+                <!--/.nav-collapse -->
+        </div>
+    </nav>
+</div>
+
+	<!-- Blog Section -->
+	<section id="cfp" class="gather_sec section-after-header">
+	    <!-- Blog Post -->
+	    <div class="row blog-post single-blog-post">
+	        <div class="col-xs-12 col-md-10 col-md-push-1">
+	            <div class="row">
+<!-- ************** Begin generated content by Play ************************ //-->
+@content
+<!--  ************* End generated content by Play ************************** //-->
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+            <!--=============== footer ===============-->
+        <footer class="page-footer">
+            <div class="social-icons">
+                <a href="https://twitter.com/VoxxedTicino" target="_blank" class="wow zoomIn"> <i class="fa fa-twitter"></i> </a>
+                <a href="https://facebook.com/VoxxedDaysTicino" target="_blank" class="wow zoomIn"> <i class="fa fa-facebook"></i> </a>
+                <a href="https://www.linkedin.com/company/voxxed-days-ticino/" target="_blank" class="wow zoomIn"> <i class="fa fa-linkedin"></i> </a>
+            </div>
+            <p><small class="text-muted">Copyright © 2015. All rights reserved.</small></p>
+            <style>
+                .small-menu-wrapper select.small-menu {
+                -webkit-appearance:menulist!important ;
+                background-image:none!important ;
+                }
+
+                .team {
+                max-width: 295px !important ;
+                }
+                .event-intro {
+                background-color: rgba(249, 249, 249, 0.91) ;
+                color: #020202 ;
+                padding: 10px ;
+                border-radius: 5px ;
+                }
+                .contact-form input {
+                min-height:40px !important ;
+                }
+                .contact-form textarea {
+                min-height:120px !important ;
+                }
+
+                img.emoji {
+                height: 1em ;
+                width: 1em ;
+                margin: 0 .05em 0 .1em ;
+                vertical-align: -0.1em ;
+                }
+            </style>
+        </footer><!-- footer end    -->
+        <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              var l = document.querySelectorAll("strong,h1,h2,h3,h4,h5,h6");
+              for(var i = 0; i < l.length;i++) {
+                  twemoji.parse(l[i])
+              }
+          }, false);
+        </script>
+</body>
+</html>
+
