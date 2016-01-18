@@ -202,22 +202,17 @@ object ConferenceDescriptor {
     // the first column on the HTML Table
     val HALL_EXPO = Room("a_hall", "Exhibition floor", 1500, "special", "rien")
 
-    val ROOM3 = Room("room3", "Room 3", 345, "theatre", "camera")
-    val ROOM4 = Room("room4", "Room 4", 364, "theatre", "camera")
-    val ROOM5 = Room("room5", "Room 5", 684, "theatre", "camera")
-    val ROOM6 = Room("room6", "Room 6", 407, "theatre", "camera")
-    val ROOM7 = Room("room7", "Room 7", 407, "theatre", "camera")
-    val ROOM8 = Room("room8", "Room 8", 745, "theatre", "camera")
-    val ROOM9 = Room("room9", "Room 9", 425, "theatre", "camera")
+    //keynote -> room 4
+    val ROOM4 = Room("b_room4", "Room 4", 521, "theatre", "camera")
 
-    val BOF1 = Room("bof1", "BOF 1", 70, "classroom", "camera")
-    val BOF2 = Room("bof2", "BOF 2", 70, "classroom", "camera")
+    val ROOM3 = Room("c_room3", "Room 3", 317, "theatre", "camera")
+    val ROOM7 = Room("d_room7", "Room 7", 305, "theatre", "camera")
+    val ROOM2 = Room("e_room2", "Room 3", 178, "theatre", "camera")
+    val ROOM8 = Room("f_room8", "Room 8", 170, "theatre", "camera")
 
-    val keynoteRoom = List(ROOM8)
-
-    val allRoomsConf = List(ROOM5, ROOM9, ROOM6, ROOM7)
-
-    val allRooms = List(ROOM8, ROOM5, ROOM9, ROOM6, ROOM7, HALL_EXPO)
+    val keynoteRoom = List(ROOM4)
+    val allRoomsConf = List(ROOM3, ROOM7, ROOM2, ROOM8)
+    val allRooms = List(ROOM4, ROOM3, ROOM7, ROOM2, ROOM8, HALL_EXPO)
   }
 
   object ConferenceSlotBreaks {
