@@ -3,7 +3,7 @@
 
 @views.html.Publisher.programHome(Messages(s"sw.show.$day")) {
     <div class="large-12 columns">
-        <h1 class="entry-title">@Messages(s"day-$day") <small>(draft)</small></h1>
+        <h1 class="entry-title">@Messages(s"day-$day")</h1>
 
         <p class="breadcrumb"><a href="@routes.Publisher.homePublisher()">@Messages("sw.home")</a> &gt;
             <a href="@routes.Publisher.showByDay("thu")">@Messages("sw.agenda.thu")</a>

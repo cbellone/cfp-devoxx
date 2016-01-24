@@ -2,12 +2,12 @@
 
 Hi,
 We're sorry to inform you that your proposal for @Messages("longYearlyName") was refused,  keep in mind that
-we received a lot of proposals and the available slots are very limited.
+we received more than 240 proposals for only 24 available slots.
 
 Proposition title : @proposal.title, @Messages(proposal.talkType.id).
 
 We would like to thank you sincerely for your proposal.
-Hopefully we can still welcome you as a @Messages("sw.speakers"), registration details
+Hopefully we can still welcome you as a Voxxian, registration details:
 
 @ConferenceDescriptor.current().conferenceUrls.registration
 

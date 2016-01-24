@@ -52,8 +52,8 @@ https://@ConferenceDescriptor.current().conferenceUrls.cfpHostname@routes.CallFo
 @if(listOfApprovedProposals.size==0){
 We're sorry to inform you that none of your proposals has been accepted for @Messages("longYearlyName").
 The program committee has received a lot of proposals for few slots. As you can imagine, the selection of speakers
-was a quite uneasy task, considering that we received a lot of very interesting applications for the conference.
-We would like to thank you for your time and we look forward to see you on @ConferenceDescriptor.current().timing.firstDayEn, at @Messages("longName").
+was a quite uneasy task, considering that we received more than 240 very interesting applications for only 24 available slots.
+We would like to thank you for your time and we look forward to seeing you on March 3rd, at Voxxed Days Zürich.
 }
 
 The @Messages("longName") program committee.
