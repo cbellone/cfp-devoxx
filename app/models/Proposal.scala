@@ -139,7 +139,7 @@ case class Proposal(id: String,
 
   def escapedTitle: String = title match {
     case null => ""
-    case t => StringUtils.stripAccents(t.replaceAll(" ", "_").trim)
+    case t => StringUtils.strip(t.trim).replaceAll("[^A-Za-z0-9]", "_")
   }
 
   def allSpeakerUUIDs: List[String] = {
