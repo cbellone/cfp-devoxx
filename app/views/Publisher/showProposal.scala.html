@@ -15,7 +15,7 @@
     }
     </div>
 
-    <div class="col-xs-12 col-md-11 col-md-push-1">
+    <div class="col-xs-12 col-md-12">
         <h1>@proposal.title</h1>
         <h3><a href="@routes.Publisher.showByTalkType(proposal.talkType.id)">@Messages(proposal.talkType.id)</a></h3>
     </div>
@@ -26,7 +26,7 @@
         <table>
             <tbody>
                 <tr>
-                    <td colspan="2">@tags.publisher.renderIconForTrack(proposal.track) @Messages(proposal.track.label)</td>
+                    <td colspan="2">@tags.publisher.renderIconForTrack(proposal.track) @Messages(proposal.track.label) <img src="/assets/images/@(proposal.lang).png" alt="@proposal.lang" title="@proposal.lang" class="pull-right"/></td>
                 </tr>
                 @if(slot.isDefined) {
                     <tr>

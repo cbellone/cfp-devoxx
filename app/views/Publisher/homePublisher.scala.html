@@ -2,14 +2,6 @@
 
 @views.html.Publisher.programHome("Schedule", Some("Voxxed Days Ticino 2016 agenda")) {
 
-    <div class="small-12 medium-8 large-8 columns">
-        <div class="input-wrap">
-            <form name="search" action="@routes.Publisher.search(None, None)" method="GET">
-                <label for="search">
-                    Find Talk or speaker : </label> <input type="search" name="q" value="" placeholder="title, keyword or speaker" class="wpcf7-form-control wpcf7-text" >
-            </form>
-        </div>
-    </div>
     <div class="small-6 medium-6 large-6 column">
         <h4>Start time</h4>
         <ul>
@@ -25,7 +17,7 @@
 
     <div class="small-12 medium-6 large-6 column">
         <h3>Keynote</h3>
-        <p>TBD</p>
+        <p>We're very pleased to announce that this year's Keynote will be held by Todd Motto (Developer advocate, JS/Angular trainer, GDE)</p>
         <p><A href="@routes.Publisher.showByTalkType("key")">Go to keynote</A></p>
     </div>
 

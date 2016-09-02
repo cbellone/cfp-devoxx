@@ -2,17 +2,18 @@
 
 @subSlots.filter(_.room.id == room.id).map { zeSlot: Slot =>
     @zeSlot.proposal.map { p: Proposal =>
-        <td class="room @room.id @zeSlot.id">
+        <td class="room @room.id @zeSlot.id clearfix">
             <span class="talkType">@Messages(p.talkType.id)</span>
             <span class="track"> @tags.publisher.renderIconForTrack(p.track) @Messages(p.track.label)</span>
             <span class="title"><a href="@routes.Publisher.showDetailsForProposal(p.id, p.escapedTitle)">@p.title</a></span>
             <span class="speaker"> @p.allSpeakerUUIDs.map { speakerUUID =>
                 @tags.publisher.renderSpeaker(speakerUUID)
-            }</span>
+            }<img src="/assets/images/@(p.lang).png" alt="@p.lang" title="@p.lang" class="pull-right"/></span>
+
         </td>
     }
     @if(zeSlot.break.isDefined) {
-        <td class="break @room.id" colspan="@roomSize">
+        <td class="break @room.id">
         @Messages("tagRenderRow-"+zeSlot.break.get.id)
         </td>
     }
@@ -20,7 +21,6 @@
         <td class="notAllocated @zeSlot.id">TBA</td>
     }
 }
-@if(subSlots.filter(_.room.id == room.id).isEmpty) {
-    <!-- nothing -->
+@if(!subSlots.exists(_.room.id == room.id)) {
     <td></td>
 }

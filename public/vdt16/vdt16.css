@@ -16847,6 +16847,7 @@ table tr td,
 table tfoot tr td {
     display: table-cell;
     line-height: 1.125rem;
+    width:14%;
 }
 
 .tabs {
@@ -29293,4 +29294,8 @@ img.speakerRound {
     background: white;
 margin-bottom: 1.25rem;
 border: solid 1px #dddddd;
+}
+
+.programTable {
+    overflow: auto;
 }

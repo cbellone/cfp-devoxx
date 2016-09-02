@@ -133,12 +133,8 @@ object ScheduleConfiguration {
     }
 
     val listOfSlots = day match {
-      case "wednesday" =>
-        extractSlot(ConferenceDescriptor.ConferenceSlots.wednesday, "wednesday")
       case "saturday" =>
-        extractSlot(ConferenceDescriptor.ConferenceSlots.saturday, "thursday")
-      case "friday" =>
-        extractSlot(ConferenceDescriptor.ConferenceSlots.friday, "friday")
+        extractSlot(ConferenceDescriptor.ConferenceSlots.saturday, "saturday")
       case other =>
         play.Logger.of("ScheduleConfiguration").warn("Could not match " + other + " in getPublishedScheduleByDay")
         Nil

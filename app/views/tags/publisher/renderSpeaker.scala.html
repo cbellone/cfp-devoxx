@@ -2,7 +2,6 @@
 
 
 @models.Speaker.findByUUID(uuid).map { speaker =>
-<div class="speaker">
 <a href="@routes.Publisher.showSpeakerByName(speaker.urlName)" title="@speaker.cleanName" alt="@speaker.urlName">
 @if(renderPhoto){
 @speaker.avatarUrl.map{url=>
@@ -11,6 +10,5 @@
 }
 @speaker.cleanName
 </a>
-</div>
 }
 
